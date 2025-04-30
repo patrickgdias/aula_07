@@ -1,0 +1,15 @@
+# Entrada
+
+def programa():
+    LIMITE = 100
+    peso = float(input('Informe o peso total de peixes: '))
+
+    if peso <= LIMITE:
+        print('Peso permitido')
+
+    else:
+        print('Excesso de peso')
+        multa = (peso - LIMITE) * 4
+        print(f'Excesso de peso, a multa correspondente é R$ {multa},00')
+
+programa()
