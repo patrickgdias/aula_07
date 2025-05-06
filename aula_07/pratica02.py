@@ -1,19 +1,13 @@
-def dobro(x):
-    d = x * 2
-    return d
+def calcula_numero(x):
+    dobro = x * 2
+    triplo = x * 3
+    quadrado = x**2
+    return dobro, triplo, quadrado
 
-def triplo(x):
-    t = x * 3
-    return t
+n = int(input('informe o número: '))
+d, t, q = calcula_numero(n)
 
-def quadrado(x):
-    q = x**2
-    return q
-
-x = int(input('Digite um número'))
-print (dobro(x))
-print (triplo(x))
-print (quadrado(x))
+print (f'dobro {d}, triplo{t}, quadrado {q}')
 
 
 

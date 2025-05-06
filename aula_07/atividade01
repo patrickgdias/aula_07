@@ -1,15 +1,22 @@
 # Entrada
+def calcula_multa(qtd):
+            
+    multa = qtd * MULTA_KG
+    return multa
+                
 
-def programa():
-    LIMITE = 100
-    peso = float(input('Informe o peso total de peixes: '))
+MULTA_KG = 4.00
+QUILOS_PERMITIDOS = 100
 
-    if peso <= LIMITE:
-        print('Peso permitido')
+peso_pescado = float(input('Informe o peso total de peixes: '))
 
-    else:
-        print('Excesso de peso')
-        multa = (peso - LIMITE) * 4
-        print(f'Excesso de peso, a multa correspondente é R$ {multa},00')
+if peso_pescado > QUILOS_PERMITIDOS:
+    excedente = peso_pescado - QUILOS_PERMITIDOS
+    vl_multa = calcula_multa(excedente)
+    print(f'o valor da multa é {vl_multa}')
+else:
+    print('sem multa a pagar')
 
-programa()
+
+
+
